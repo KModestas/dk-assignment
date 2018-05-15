@@ -7,12 +7,12 @@ class NewsLetter extends Component {
     this.state = {
       categories: [
         {
-          name: 'src/assets/children-s-copy-2.png',
-          image: 'src/assets/bitmap-copy-2.png'
+          name: require('../assets/children-s-copy-2.png'),
+          image: require('../assets/bitmap-copy-2.png')
         },
         {
-          name: 'src/assets/crafts-hobbies-copy.png',
-          image: 'src/assets/bitmap-copy-9.png'
+          name: require('../assets/crafts-hobbies-copy.png'),
+          image: require('../assets/bitmap-copy-9.png')
         }
       ]
     };
@@ -24,10 +24,12 @@ class NewsLetter extends Component {
         <img
           className="Book-Recommendations"
           src={require('../assets/book-recommendations.png')}
+          alt=""
         />
         <img
           className="categories"
           src={require('../assets/choose-from-the-cate.png')}
+          alt=""
         />
         <div>
           {
@@ -35,8 +37,8 @@ class NewsLetter extends Component {
               return(
                 <div className="category-block" key={i}>
                   <input type="checkbox" />
-                  <img className="category-name" src={require(category.name)}/>
-                  <img className="category-image" src={require(category.image)}/>
+                  <img className="category-name" alt="" src={category.name}/>
+                  <img className="category-image" alt="" src={category.image}/>
                 </div>
               );
             })
