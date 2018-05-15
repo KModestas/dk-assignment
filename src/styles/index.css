@@ -1,0 +1,12 @@
+.blue-bg {
+  width: 1180px;
+  height: 596px;
+  background: url('../assets/rectangle-8.png');
+}
+
+.Book-Recommendations {
+  /*background: url('../assets/book-recommendations.png');*/
+  width: 780px;
+  height: 56px;
+  object-fit: contain;
+}
