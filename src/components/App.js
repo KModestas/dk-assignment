@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import NewsLetter from './NewsLetter';
+import SuccessPage from './SuccessPage';
 import '../styles/index.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return(
-      <div>
-        <NewsLetter />
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route exact path="/" component={NewsLetter} />
+          <Route path="/success" component={SuccessPage} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

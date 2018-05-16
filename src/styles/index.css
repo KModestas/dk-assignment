@@ -8,11 +8,15 @@
   height: 930px;
   background: url('../assets/rectangle-8.png');
   margin: 50px auto;
-  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  /*properties are necessary when trying to margin auto with position absolute*/
 }
 
 .Book-Recommendations {
-  /*background: url('../assets/book-recommendations.png');*/
   width: 780px;
   height: 56px;
   object-fit: contain;
@@ -20,34 +24,27 @@
   display: block;
 }
 
-.categories {
+.category-subheading {
   width: 723px;
   height: 24px;
   object-fit: contain;
   display: block;
-  margin: 10px auto;
-
+  margin: 20px auto;
 }
 
 .NewsLetterContainer {
     margin: 62px auto;
-    /*position: absolute;*/
     text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     width: 1080px;
-     /*necessary in order for margin auto to work*/
 }
 
-.category-block {
+.category-container {
   margin: 20px auto;
   max-width: 1080px;
   text-align: center;
 }
 
-.category {
+.category-block {
   width: 340px;
   height: 60px;
   object-fit: contain;
@@ -59,11 +56,6 @@
   margin: 10px;
 }
 
-.category-name {
-  max-width: 178px;
-  height: 19px;
-  object-fit: contain;
-}
 
 .category-image {
   max-width: 76px;
@@ -77,4 +69,115 @@
 .subform-container {
   width: 780px;
   height: 200px;
+  margin: auto;
+}
+
+.Join-our-newsletter {
+  width: 612px;
+  height: 18px;
+  display: block;
+  margin: 30px auto;
+  object-fit: contain;
+}
+
+.subform-inputs {
+  width: 780px;
+  height: 232px;
+  object-fit: contain;
+  margin: auto;
+}
+
+.fname-input {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.lname-input {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.email-input {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.termsAndConditions {
+  display: inline-flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+input[type="text"] {
+  width: 380px;
+  height: 60px;
+  object-fit: contain;
+  background-color: #ffffff;
+  display: inline-block;
+  margin: 3px;
+  font-size: 16px;
+}
+
+button {
+  width: 183px;
+  height: 60px;
+  object-fit: contain;
+  display: inline-flex;
+  background-color: #e30613;
+  color: white;
+}
+
+input[type="checkbox"] {
+  -webkit-transform: scale(1.25);
+  /*display: block;*/
+  margin-left: 20px;
+}
+
+.iAgree {
+  width: 349px;
+  height: 20px;
+  object-fit: contain;
+  margin-left: 15px;
+}
+
+p {
+  color: red;
+  display: block;
+}
+
+.subscribe {
+  display: inline-block;
+  margin: auto;
+}
+
+/**********SUCESSS PAGE**************/
+
+.success-container {
+  width: 1180px;
+  height:440px;
+  background: url('../assets/rectangle-green.png');
+  margin: 63px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.butterfly {
+  width: 207px;
+  height: 280px;
+  object-fit: contain;
+  background: url('../assets/bitmap.png');
+}
+
+
+.thankyou {
+  width: 532px;
+  height: 168px;
+  object-fit: contain;
+  /*background: url('../assets/success-thank-you-f.png');*/
 }
