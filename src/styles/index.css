@@ -5,9 +5,9 @@
 
 .blue-bg {
   width: 1180px;
-  height: 596px;
+  height: 930px;
   background: url('../assets/rectangle-8.png');
-  margin: auto;
+  margin: 50px auto;
   position: relative;
 }
 
@@ -25,7 +25,8 @@
   height: 24px;
   object-fit: contain;
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
+
 }
 
 .NewsLetterContainer {
@@ -55,7 +56,7 @@
   justify-content: space-between;
   align-items: center;
   /*padding: 5px;*/
-  margin: 5px;
+  margin: 10px;
 }
 
 .category-name {
