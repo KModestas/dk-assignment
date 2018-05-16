@@ -1,8 +1,14 @@
+
+* {
+  box-sizing: border-box;
+}
+
 .blue-bg {
   width: 1180px;
   height: 596px;
   background: url('../assets/rectangle-8.png');
   margin: auto;
+  position: relative;
 }
 
 .Book-Recommendations {
@@ -22,25 +28,44 @@
   margin: 0 auto;
 }
 
-.headings {
-    margin-top: 62px;
+.NewsLetterContainer {
+    margin: 62px auto;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1080px;
+     /*necessary in order for margin auto to work*/
 }
 
 .category-block {
+  margin: 20px auto;
+  max-width: 1080px;
+  text-align: center;
+}
+
+.category {
   width: 340px;
   height: 60px;
   object-fit: contain;
   background-color: #ffffff;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  /*padding: 5px;*/
+  margin: 5px;
 }
 
 .category-name {
-  width: 78px;
+  max-width: 178px;
   height: 19px;
   object-fit: contain;
 }
 
 .category-image {
-  width: 50px;
-  height: 42px;
+  max-width: 76px;
+  max-height: 42px;
   object-fit: contain;
 }
