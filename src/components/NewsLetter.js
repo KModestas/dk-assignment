@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SubForm from './SubForm';
 
 class NewsLetter extends Component {
 
@@ -54,11 +55,21 @@ class NewsLetter extends Component {
           name: require('../assets/travel-copy-3.png'),
           image: require('../assets/bitmap-copy-13.png')
         }
-      ]
+      ],
+      checked: false
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
+  handleChange() {
+   this.setState({
+     checked: true
+   })
+ }
+
   render() {
+
+
     return (
       <div className="blue-bg">
         <div className="NewsLetterContainer">
@@ -77,7 +88,8 @@ class NewsLetter extends Component {
             this.state.categories.map(( category, i )=> {
               return(
                 <div className="category" key={i}>
-                  <input type="checkbox" />
+                  <input type="checkbox"
+          onChange={ this.handleChange } />
                   <img className="category-name" alt="" src={category.name}/>
                   <img className="category-image" alt="" src={category.image}/>
                 </div>
@@ -86,6 +98,7 @@ class NewsLetter extends Component {
           }
         </div>
       </div>
+        <SubForm />
       </div>
     );
   }

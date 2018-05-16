@@ -31,7 +31,7 @@
 
 .NewsLetterContainer {
     margin: 62px auto;
-    position: absolute;
+    /*position: absolute;*/
     text-align: center;
     top: 0;
     left: 0;
@@ -69,4 +69,12 @@
   max-width: 76px;
   max-height: 42px;
   object-fit: contain;
+}
+
+
+/*****************SUBFORM STYLES*********************/
+
+.subform-container {
+  width: 780px;
+  height: 200px;
 }
