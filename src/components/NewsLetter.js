@@ -10,64 +10,65 @@ class NewsLetter extends Component {
         {
           name: require('../assets/children-s-copy-2.png'),
           image: require('../assets/bitmap-copy-2.png'),
-          checked: 0,
+          checked: true
         },
         {
           name: require('../assets/crafts-hobbies-copy.png'),
           image: require('../assets/bitmap-copy-9.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/education-teachers-copy-2.png'),
           image: require('../assets/bitmap-copy-7@2x.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/food-drink-copy-2.png'),
           image: require('../assets/bitmap-copy-12.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/gardening-copy.png'),
           image: require('../assets/bitmap-copy-11.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/health-fitness-copy-2.png'),
           image: require('../assets/bitmap-copy-6.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/history-reference-copy-2.png'),
           image: require('../assets/bitmap-copy-3.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/lego-books-copy-2.png'),
           image: require('../assets/bitmap-copy-8.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/marvel-copy.png'),
           image: require('../assets/bitmap-copy-10.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/pregnancy-parentin-copy-2.png'),
           image: require('../assets/bitmap-copy-4.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/star-wars-copy-2.png'),
           image: require('../assets/bitmap-copy-5.png'),
-          checked: 0
+          checked: true
         },
         {
           name: require('../assets/travel-copy-3.png'),
           image: require('../assets/bitmap-copy-13.png'),
-          checked: 0
+          checked: true
         }
-      ]
+      ],
+      valid: false
     };
 
   }
@@ -95,8 +96,7 @@ class NewsLetter extends Component {
         <div className="category-container">
           {
             this.state.categories.map(( category, i )=> {
-              const total = category.checked += category.checked
-              console.log(total)
+
               return(
                 <div className="category-block" key={i}>
                   <input

@@ -67,7 +67,7 @@ class SubForm extends Component {
       console.log(this.state.emailError)
     } else if (this.state.email.indexOf('@') === -1) {
       isError = true;
-      errors.emailError = 'Please enter a valid email address'
+      errors.emailError = 'Email Address must contain an "@" symbol'
     }
 
     if(!this.state.checked) {
