@@ -4,7 +4,7 @@
 }
 
 .blue-bg {
-  width: 1180px;
+  max-width: 1180px;
   height: 930px;
   background: url('../assets/rectangle-8.png');
   margin: 50px auto;
@@ -154,6 +154,7 @@ p {
   display: inline-block;
   margin: auto;
 }
+
 
 /**********SUCESSS PAGE**************/
 
