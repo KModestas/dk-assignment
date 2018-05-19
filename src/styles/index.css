@@ -69,13 +69,6 @@
   object-fit: contain;
 }
 
-/*.hide-categories {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}*/
-
 
 /*****************SUBFORM STYLES*********************/
 
@@ -151,9 +144,9 @@ button {
   display: none;
 }
 
-#hide-button {
+/*#hide-button {
   display: none;
-}
+}*/
 
 input[type="checkbox"] {
   width: 18px;
@@ -207,9 +200,9 @@ p {
 }
 
 
-@media screen and (max-width: 1079px) {
+@media screen and (max-width: 1024px) {
   .blue-bg {
-    width: 980px;
+    width: 970px;
     height: 150vh;
   }
 
@@ -323,7 +316,7 @@ p {
     display: inline-block;
   }
 
-  .hide-category-block {
+  .hide {
     display: none;
   }
 
