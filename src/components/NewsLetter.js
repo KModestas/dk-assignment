@@ -37,7 +37,7 @@ class NewsLetter extends Component {
 
       <div className="category-container">
 
-      <div className="category-flex">
+{/* <div className="category-flex"> */}
         <div className="category-block">
           <input type="checkbox"/>
           <img src={require("../assets/children-s-copy-2.png")} alt=""/>
@@ -69,14 +69,14 @@ class NewsLetter extends Component {
             Show All Categories &#709;
         </button>
 
-        <div className={this.state.hideCategories}>
+
+
+    <div className={this.state.hideCategories}>
           <div className="category-block">
             <input type="checkbox"/>
             <img src={require("../assets/food-drink-copy-2.png")} alt=""/>
             <img src={require("../assets/bitmap-copy-12.png")} alt=""/>
           </div>
-        </div>
-
 
 
           <div className="category-block">
@@ -127,8 +127,8 @@ class NewsLetter extends Component {
             <img src={require("../assets/bitmap-copy-13.png")} alt=""/>
           </div>
 
-          </div>
-
+    {/* </div> */}
+</div>
     </div>
 
         <SubForm />

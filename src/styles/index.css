@@ -44,7 +44,7 @@
 
 .category-container {
   margin: 20px auto;
-  width: 1080px;
+  max-width: 1080px;
   text-align: center;
 }
 
@@ -201,7 +201,7 @@ p {
 
   .blue-bg {
     width: 768px;
-    height: 130vh;
+    height: 140vh;
   }
 
   .book-recommendations {
@@ -217,7 +217,7 @@ p {
   }
 
   .category-container {
-    width: 760px;
+    max-width: 760px;
   }
 
   .category-block {
@@ -244,6 +244,7 @@ p {
 
   .blue-bg {
     width: 320px;
+    height: 190vh;
     margin: 0;
   }
 
@@ -298,10 +299,10 @@ p {
   .show-all-categories {
     display: inline-block;
   }
-/*
+
   .hide-categories {
     display: none;
-  }*/
+  }
 
   /*****SUCESSS PAGE MEDIA QUERIES************/
 
