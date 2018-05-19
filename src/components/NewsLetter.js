@@ -6,68 +6,6 @@ class NewsLetter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: [
-        {
-          name: require('../assets/children-s-copy-2.png'),
-          image: require('../assets/bitmap-copy-2.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/crafts-hobbies-copy.png'),
-          image: require('../assets/bitmap-copy-9.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/education-teachers-copy-2.png'),
-          image: require('../assets/bitmap-copy-7@2x.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/food-drink-copy-2.png'),
-          image: require('../assets/bitmap-copy-12.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/gardening-copy.png'),
-          image: require('../assets/bitmap-copy-11.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/health-fitness-copy-2.png'),
-          image: require('../assets/bitmap-copy-6.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/history-reference-copy-2.png'),
-          image: require('../assets/bitmap-copy-3.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/lego-books-copy-2.png'),
-          image: require('../assets/bitmap-copy-8.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/marvel-copy.png'),
-          image: require('../assets/bitmap-copy-10.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/pregnancy-parentin-copy-2.png'),
-          image: require('../assets/bitmap-copy-4.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/star-wars-copy-2.png'),
-          image: require('../assets/bitmap-copy-5.png'),
-          checked: true
-        },
-        {
-          name: require('../assets/travel-copy-3.png'),
-          image: require('../assets/bitmap-copy-13.png'),
-          checked: true
-        }
-      ],
       hideCategories: 'hide-categories',
       hideButton: '',
       blueBgVh: ''
@@ -79,8 +17,6 @@ class NewsLetter extends Component {
     this.setState({
       checked: !this.state.categories.checked
     })
-
-
   }
 
   handleClick =()=> {
@@ -98,50 +34,29 @@ class NewsLetter extends Component {
 
           <div className="book-recommendations"></div>
           <div className="category-subheading"></div>
-        {/* <div className="category-container">
-          {
-            this.state.categories.map(( category, i )=> {
-
-              return(
-                <div className="category-block" key={i}>
-                  <input
-                    type="checkbox"
-                    onChange={ this.handleChange }
-                    checked={ this.state.categories.checked }
-                  />
-                  <img
-                    alt=""
-                    src={category.name}
-                  />
-                  <img
-                    className="category-image"
-                    alt=""
-                    src={category.image}
-                  />
-                </div>
-              );
-            })
-          }
-        </div> */}
-
 
       <div className="category-container">
         <div className="category-block">
           <input type="checkbox"/>
-          <img src="" alt=""/>
-          <img src="" alt=""/>
+          <img src={require("../assets/children-s-copy-2.png")} alt=""/>
+          <img src={require("../assets/bitmap-copy-2.png")} alt=""/>
         </div>
 
         <div className="category-block">
           <input type="checkbox"/>
-          <img src="" alt=""/>
-          <img src="" alt=""/>
+          <img src={require("../assets/crafts-hobbies-copy.png")} alt=""/>
+          <img src={require("../assets/bitmap-copy-9.png")} alt=""/>
         </div>
 
         <div className="category-block">
           <input type="checkbox"/>
-          <img src="" alt=""/>
-          <img src="" alt=""/>
+          <img src={require("../assets/education-teachers-copy-2.png")} alt=""
+          />
+          <img
+            src={require("../assets/bitmap-copy-7@2x.png")}
+            alt=""
+            className="category-image"
+        />
         </div>
 
         <button
@@ -149,62 +64,62 @@ class NewsLetter extends Component {
           id={this.state.hideButton}
           onClick={this.handleClick}
           >
-            Show All Categories
+            Show All Categories &#709;
         </button>
 
         <div className={this.state.hideCategories}>
           <div className="category-block">
             <input type="checkbox"/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            <img src={require("../assets/food-drink-copy-2.png")} alt=""/>
+            <img src={require("../assets/bitmap-copy-12.png")} alt=""/>
           </div>
 
           <div className="category-block">
             <input type="checkbox"/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            <img src={require("../assets/gardening-copy.png")} alt=""/>
+            <img src={require("../assets/bitmap-copy-11.png")} alt=""/>
           </div>
 
           <div className="category-block">
             <input type="checkbox"/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            <img src={require("../assets/health-fitness-copy-2.png")} alt=""/>
+            <img src={require("../assets/bitmap-copy-6.png")} alt=""/>
           </div>
 
           <div className="category-block">
             <input type="checkbox"/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            <img src={require("../assets/history-reference-copy-2.png")} alt=""/>
+            <img src={require("../assets/bitmap-copy-3.png")} alt=""/>
           </div>
 
           <div className="category-block">
             <input type="checkbox"/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            <img src={require("../assets/lego-books-copy-2.png")} alt=""/>
+            <img src={require("../assets/bitmap-copy-8.png")} alt=""/>
           </div>
 
           <div className="category-block">
             <input type="checkbox"/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            <img src={require("../assets/marvel-copy.png")} alt=""/>
+            <img src={require("../assets/bitmap-copy-10.png")} alt=""/>
           </div>
 
           <div className="category-block">
             <input type="checkbox"/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            <img src={require("../assets/pregnancy-parentin-copy-2.png")} alt=""/>
+            <img src={require("../assets/bitmap-copy-4.png")} alt=""/>
           </div>
 
           <div className="category-block">
             <input type="checkbox"/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            <img src={require("../assets/star-wars-copy-2.png")} alt=""/>
+            <img src={require("../assets/bitmap-copy-5.png")} alt=""/>
           </div>
 
           <div className="category-block">
             <input type="checkbox"/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            <img src={require("../assets/travel-copy-3.png")} alt=""/>
+            <img src={require("../assets/bitmap-copy-13.png")} alt=""/>
           </div>
         </div>
     </div>
