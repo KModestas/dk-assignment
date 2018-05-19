@@ -16,9 +16,6 @@
   /*properties are necessary when trying to margin auto with position absolute*/
 }
 
-.blue-bg-vh {
-  height: 270vh;
-}
 
 .book-recommendations {
   width: 780px;
@@ -183,6 +180,10 @@ p {
     margin: 0;
   }
 
+  .blue-bg-vh {
+    height: 270vh;
+  }
+
   .book-recommendations {
     width: 280px;
     height: 52px;
@@ -231,13 +232,29 @@ p {
     display: none;
   }
 
+  /*****SUCESSS PAGE MEDIA QUERIES************/
+
+  .butterfly {
+    width: 96px;
+    height: 129px;;
+  }
+
+  .thankyou {
+    width: 280px;
+    height: 78px;
+  }
+
+  .success-container {
+    flex-direction: column;
+  }
+
 }
 
 
 /**********SUCESSS PAGE**************/
 
 .success-container {
-  width: 1180px;
+  max-width: 1180px;
   height:440px;
   background: url('../assets/rectangle-green.png');
   margin: 63px auto;
@@ -247,15 +264,15 @@ p {
 }
 
 .butterfly {
-  width: 207px;
+  max-width: 207px;
   height: 280px;
   object-fit: contain;
-  background: url('../assets/bitmap.png');
+  background: url('../assets/bitmap.png') no-repeat center;
 }
 
 
 .thankyou {
-  width: 532px;
+  max-width: 532px;
   height: 168px;
   object-fit: contain;
   /*background: url('../assets/success-thank-you-f.png');*/
