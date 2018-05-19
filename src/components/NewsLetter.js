@@ -6,9 +6,56 @@ class NewsLetter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideCategories: 'hide-categories',
       hideButton: '',
-      blueBgVh: ''
+      blueBgVh: '',
+      hideCategories: [
+      {
+        class: 'hide-category-block',
+        name: require("../assets/food-drink-copy-2.png"),
+        image: require("../assets/bitmap-copy-12.png")
+      },
+      {
+        class: 'hide-category-block',
+        name: require("../assets/gardening-copy.png"),
+        image: require("../assets/bitmap-copy-11.png")
+      },
+      {
+        class: 'hide-category-block',
+        name: require("../assets/health-fitness-copy-2.png"),
+        image: require("../assets/bitmap-copy-6.png")
+      },
+      {
+        class: 'hide-category-block',
+        name: require("../assets/history-reference-copy-2.png"),
+        image: require("../assets/bitmap-copy-3.png")
+      },
+      {
+        class: 'hide-category-block',
+        name: require("../assets/lego-books-copy-2.png"),
+        image: require("../assets/bitmap-copy-8.png")
+      },
+      {
+        class: 'hide-category-block',
+        name: require("../assets/marvel-copy.png"),
+        image: require("../assets/bitmap-copy-10.png")
+      },
+      {
+        class: 'hide-category-block',
+        name: require("../assets/pregnancy-parentin-copy-2.png"),
+        image: require("../assets/bitmap-copy-4.png")
+      },
+      {
+        class: 'hide-category-block',
+        name: require("../assets/star-wars-copy-2.png"),
+        image: require("../assets/bitmap-copy-5.png")
+      },
+      {
+        class: 'hide-category-block',
+        name: require("../assets/travel-copy-3.png"),
+        image: require("../assets/bitmap-copy-13.png")
+      },
+    ]
+
     };
 
   }
@@ -35,101 +82,52 @@ class NewsLetter extends Component {
           <div className="book-recommendations"></div>
           <div className="category-subheading"></div>
 
-      <div className="category-container">
+<div className="category-container">
+    <div className="category-flex">
+            <div className="category-block">
+              <input type="checkbox"/>
+              <img src={require("../assets/children-s-copy-2.png")} alt=""/>
+              <img src={require("../assets/bitmap-copy-2.png")} alt=""/>
+            </div>
 
-{/* <div className="category-flex"> */}
-        <div className="category-block">
-          <input type="checkbox"/>
-          <img src={require("../assets/children-s-copy-2.png")} alt=""/>
-          <img src={require("../assets/bitmap-copy-2.png")} alt=""/>
-        </div>
+            <div className="category-block">
+              <input type="checkbox"/>
+              <img src={require("../assets/crafts-hobbies-copy.png")} alt=""/>
+              <img src={require("../assets/bitmap-copy-9.png")} alt=""/>
+            </div>
 
-        <div className="category-block">
-          <input type="checkbox"/>
-          <img src={require("../assets/crafts-hobbies-copy.png")} alt=""/>
-          <img src={require("../assets/bitmap-copy-9.png")} alt=""/>
-        </div>
+            <div className="category-block">
+              <input type="checkbox"/>
+              <img src={require("../assets/education-teachers-copy-2.png")} alt=""
+              />
+              <img
+                src={require("../assets/bitmap-copy-7@2x.png")}
+                alt=""
+                className="category-image"
+            />
+            </div>
 
-        <div className="category-block">
-          <input type="checkbox"/>
-          <img src={require("../assets/education-teachers-copy-2.png")} alt=""
-          />
-          <img
-            src={require("../assets/bitmap-copy-7@2x.png")}
-            alt=""
-            className="category-image"
-        />
-        </div>
+            <button
+              className='show-all-categories'
+              id={this.state.hideButton}
+              onClick={this.handleClick}
+              >
+                Show All Categories &#709;
+            </button>
 
-        <button
-          className='show-all-categories'
-          id={this.state.hideButton}
-          onClick={this.handleClick}
-          >
-            Show All Categories &#709;
-        </button>
-
-
-
-    <div className={this.state.hideCategories}>
-          <div className="category-block">
-            <input type="checkbox"/>
-            <img src={require("../assets/food-drink-copy-2.png")} alt=""/>
-            <img src={require("../assets/bitmap-copy-12.png")} alt=""/>
-          </div>
-
-
-          <div className="category-block">
-            <input type="checkbox"/>
-            <img src={require("../assets/gardening-copy.png")} alt=""/>
-            <img src={require("../assets/bitmap-copy-11.png")} alt=""/>
-          </div>
-
-          <div className="category-block">
-            <input type="checkbox"/>
-            <img src={require("../assets/health-fitness-copy-2.png")} alt=""/>
-            <img src={require("../assets/bitmap-copy-6.png")} alt=""/>
-          </div>
-
-          <div className="category-block">
-            <input type="checkbox"/>
-            <img src={require("../assets/history-reference-copy-2.png")} alt=""/>
-            <img src={require("../assets/bitmap-copy-3.png")} alt=""/>
-          </div>
-
-          <div className="category-block">
-            <input type="checkbox"/>
-            <img src={require("../assets/lego-books-copy-2.png")} alt=""/>
-            <img src={require("../assets/bitmap-copy-8.png")} alt=""/>
-          </div>
-
-          <div className="category-block">
-            <input type="checkbox"/>
-            <img src={require("../assets/marvel-copy.png")} alt=""/>
-            <img src={require("../assets/bitmap-copy-10.png")} alt=""/>
-          </div>
-
-          <div className="category-block">
-            <input type="checkbox"/>
-            <img src={require("../assets/pregnancy-parentin-copy-2.png")} alt=""/>
-            <img src={require("../assets/bitmap-copy-4.png")} alt=""/>
-          </div>
-
-          <div className="category-block">
-            <input type="checkbox"/>
-            <img src={require("../assets/star-wars-copy-2.png")} alt=""/>
-            <img src={require("../assets/bitmap-copy-5.png")} alt=""/>
-          </div>
-
-          <div className="category-block">
-            <input type="checkbox"/>
-            <img src={require("../assets/travel-copy-3.png")} alt=""/>
-            <img src={require("../assets/bitmap-copy-13.png")} alt=""/>
-          </div>
-
-    {/* </div> */}
+            {
+              this.state.hideCategories.map((category, i) => {
+                return(
+                  <div className={`${category.class} category-block`}>
+                    <input type="checkbox"/>
+                    <img src={category.name} alt="" />
+                    <img src={category.image} alt="" />
+                  </div>
+                )
+              })
+            }
+      </div>
 </div>
-    </div>
 
         <SubForm />
       </div>
