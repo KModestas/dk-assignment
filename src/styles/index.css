@@ -16,6 +16,10 @@
   /*properties are necessary when trying to margin auto with position absolute*/
 }
 
+.blue-bg-vh {
+  height: 270vh;
+}
+
 .book-recommendations {
   width: 780px;
   height: 56px;
@@ -136,6 +140,14 @@ button {
   color: white;
 }
 
+.show-all-categories {
+  display: none;
+}
+
+#hide-button {
+  display: none;
+}
+
 input[type="checkbox"] {
   width: 18px;
   height: 18px;
@@ -168,7 +180,7 @@ p {
 
   .blue-bg {
     width: 320px;
-    height: 260vh;
+    margin: 0;
   }
 
   .book-recommendations {
@@ -209,6 +221,14 @@ p {
     width: 250px;
     height: 36px;
     background: url('../assets/i-agree-to-the-priva-copy3.png') no-repeat center;
+  }
+
+  .show-all-categories {
+    display: inline-block;
+  }
+
+  .hide-categories {
+    display: none;
   }
 
 }
