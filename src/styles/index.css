@@ -16,26 +16,28 @@
   /*properties are necessary when trying to margin auto with position absolute*/
 }
 
-.Book-Recommendations {
+.book-recommendations {
   width: 780px;
   height: 56px;
   object-fit: contain;
   margin: auto;
   display: block;
+  background: url('../assets/book-recommendations.png') no-repeat;
 }
 
 .category-subheading {
-  width: 723px;
+  max-width: 723px;
   height: 24px;
   object-fit: contain;
   display: block;
   margin: 20px auto;
+  background: url('../assets/choose-from-the-cate.png') no-repeat;
 }
 
 .NewsLetterContainer {
     margin: 62px auto;
     text-align: center;
-    width: 1080px;
+    max-width: 1080px;
 }
 
 .category-container {
@@ -67,21 +69,22 @@
 /*****************SUBFORM STYLES*********************/
 
 .subform-container {
-  width: 780px;
+  max-width: 780px;
   height: 200px;
   margin: auto;
 }
 
 .Join-our-newsletter {
-  width: 612px;
+  max-width: 612px;
   height: 18px;
-  display: block;
+  text-align: center;
   margin: 30px auto;
   object-fit: contain;
+  background: url('../assets/join-our-newsletter.png') no-repeat center;
 }
 
 .subform-inputs {
-  width: 780px;
+  max-width: 780px;
   height: 232px;
   object-fit: contain;
   margin: auto;
@@ -107,6 +110,7 @@
 }
 
 .termsAndConditions {
+  max-width: 800px;
   display: inline-flex;
   flex-direction: row;
   margin-top: 20px;
@@ -133,8 +137,8 @@ button {
 }
 
 input[type="checkbox"] {
-  -webkit-transform: scale(1.25);
-  /*display: block;*/
+  width: 18px;
+  height: 18px;
   margin-left: 20px;
 }
 
@@ -143,6 +147,7 @@ input[type="checkbox"] {
   height: 20px;
   object-fit: contain;
   margin-left: 15px;
+  background: url('../assets/i-agree-to-the-priva.png') no-repeat center;
 }
 
 p {
@@ -153,6 +158,59 @@ p {
 .subscribe {
   display: inline-block;
   margin: auto;
+}
+
+
+@media screen and (max-width: 320px) {
+  body {
+    width: 320px;
+  }
+
+  .blue-bg {
+    width: 320px;
+    height: 260vh;
+  }
+
+  .book-recommendations {
+    width: 280px;
+    height: 52px;
+    margin: auto;
+    background: url('../assets/book-recommendations2.png') no-repeat center;
+  }
+
+  .category-subheading {
+    width: 280px;
+    height: 36px;
+    background: url('../assets/choose-from-the-cate2.png') no-repeat center;
+  }
+
+  input[type="text"] {
+    width: 280px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .email-input {
+    margin: 0;
+  }
+
+  .category-block {
+    width: 280px;
+    height: 44px;
+  }
+
+  .Join-our-newsletter {
+    width: 280px;
+    height: 36px;
+    background: url('../assets/join-our-newsletter2.png') no-repeat center;
+  }
+
+  .iAgree {
+    width: 250px;
+    height: 36px;
+    background: url('../assets/i-agree-to-the-priva-copy3.png') no-repeat center;
+  }
+
 }
 
 

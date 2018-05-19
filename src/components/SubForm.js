@@ -110,11 +110,9 @@ class SubForm extends Component {
   render() {
     return(
       <form className="subform-container">
-        <img
-          src={require('../assets/join-our-newsletter.png')}
-          alt=""
-          className="Join-our-newsletter"
-        />
+
+        <div className="Join-our-newsletter"></div>
+
         <div className="subform-inputs">
           <div className="fname-input">
             <input
@@ -166,11 +164,9 @@ class SubForm extends Component {
               checked={this.state.checked}
               onClick={this.handleCheckBox}
             />
-            <img
-              className="iAgree"
-              src={require('../assets/i-agree-to-the-priva.png')}
-              alt=""
-            />
+
+          <div className="iAgree"></div>
+
           </div>
             <p>{ this.state.checkedError }</p>
         </div>

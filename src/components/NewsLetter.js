@@ -77,23 +77,22 @@ class NewsLetter extends Component {
     this.setState({
       checked: !this.state.categories.checked
     })
+
+
+  }
+
+  valid =()=> {
+
   }
 
   render() {
     return (
       <div className="blue-bg">
         <div className="NewsLetterContainer">
-        <img
-          className="Book-Recommendations"
-          src={require('../assets/book-recommendations.png')}
-          alt=""
-        />
-        <img
-          className="category-subheading"
-          src={require('../assets/choose-from-the-cate.png')}
-          alt=""
-        />
-        <div className="category-container">
+
+          <div className="book-recommendations"></div>
+          <div className="category-subheading"></div>
+        {/* <div className="category-container">
           {
             this.state.categories.map(( category, i )=> {
 
@@ -117,7 +116,88 @@ class NewsLetter extends Component {
               );
             })
           }
+        </div> */}
+
+
+      <div className="category-container">
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
         </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+
+        <div className="category-block">
+          <input type="checkbox"/>
+          <img src="" alt=""/>
+          <img src="" alt=""/>
+        </div>
+      </div>
+
+
+
+
+
+
         <SubForm />
       </div>
 
