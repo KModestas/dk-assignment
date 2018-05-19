@@ -60,17 +60,63 @@ class NewsLetter extends Component {
 
   }
 
-  handleChange =()=> {
-    this.setState({
-      checked: !this.state.categories.checked
-    })
-  }
+  // handleChange =()=> {
+  //   this.setState({
+  //     checked: !this.state.categories.checked
+  //   })
+  // }
 
   handleClick =()=> {
     this.setState({
-      hideCategories: '',
       hideButton: 'hide-button',
-      blueBgVh: 'blue-bg-vh'
+      blueBgVh: 'blue-bg-vh',
+      hideCategories: [
+      {
+        class: '',
+        name: require("../assets/food-drink-copy-2.png"),
+        image: require("../assets/bitmap-copy-12.png")
+      },
+      {
+        class: '',
+        name: require("../assets/gardening-copy.png"),
+        image: require("../assets/bitmap-copy-11.png")
+      },
+      {
+        class: '',
+        name: require("../assets/health-fitness-copy-2.png"),
+        image: require("../assets/bitmap-copy-6.png")
+      },
+      {
+        class: '',
+        name: require("../assets/history-reference-copy-2.png"),
+        image: require("../assets/bitmap-copy-3.png")
+      },
+      {
+        class: '',
+        name: require("../assets/lego-books-copy-2.png"),
+        image: require("../assets/bitmap-copy-8.png")
+      },
+      {
+        class: '',
+        name: require("../assets/marvel-copy.png"),
+        image: require("../assets/bitmap-copy-10.png")
+      },
+      {
+        class: '',
+        name: require("../assets/pregnancy-parentin-copy-2.png"),
+        image: require("../assets/bitmap-copy-4.png")
+      },
+      {
+        class: '',
+        name: require("../assets/star-wars-copy-2.png"),
+        image: require("../assets/bitmap-copy-5.png")
+      },
+      {
+        class: '',
+        name: require("../assets/travel-copy-3.png"),
+        image: require("../assets/bitmap-copy-13.png")
+      },
+    ]
     })
   }
 

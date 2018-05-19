@@ -206,9 +206,22 @@ p {
   background: url('../assets/success-thank-you-f.png') no-repeat;
 }
 
+
+@media screen and (max-width: 1079px) {
+  .blue-bg {
+    width: 980px;
+    height: 150vh;
+  }
+
+  input[type="text"] {
+    width: 330px;
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
-
-
   .blue-bg {
     width: 768px;
     height: 140vh;
@@ -310,7 +323,7 @@ p {
     display: inline-block;
   }
 
-  .hide-categories {
+  .hide-category-block {
     display: none;
   }
 
