@@ -201,7 +201,7 @@ p {
 
   .blue-bg {
     width: 768px;
-    height: 155vh;
+    height: 130vh;
   }
 
   .book-recommendations {
@@ -230,7 +230,13 @@ p {
     justify-content: center;
   }
 
-  
+  input[type="text"] {
+    width: 330px;
+    height: 60px;
+    font-size: 16px;
+  }
+
+
 }
 
 
