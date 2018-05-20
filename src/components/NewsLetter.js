@@ -8,54 +8,63 @@ class NewsLetter extends Component {
     this.state = {
       hideButton: '',
       blueBgVh: '',
-      hideCategories: [
+      hiddenCategories: [
       {
         class: 'hide',
         name: require("../assets/food-drink-copy-2.png"),
-        image: require("../assets/bitmap-copy-12.png")
+        image: require("../assets/bitmap-copy-12.png"),
+        checked: 0
       },
       {
         class: 'hide',
         name: require("../assets/gardening-copy.png"),
-        image: require("../assets/bitmap-copy-11.png")
+        image: require("../assets/bitmap-copy-11.png"),
+        checked: 0
       },
       {
         class: 'hide',
         name: require("../assets/health-fitness-copy-2.png"),
-        image: require("../assets/bitmap-copy-6.png")
+        image: require("../assets/bitmap-copy-6.png"),
+        checked: 0
       },
       {
         class: 'hide',
         name: require("../assets/history-reference-copy-2.png"),
-        image: require("../assets/bitmap-copy-3.png")
+        image: require("../assets/bitmap-copy-3.png"),
+        checked: 0
       },
       {
         class: 'hide',
         name: require("../assets/lego-books-copy-2.png"),
-        image: require("../assets/bitmap-copy-8.png")
+        image: require("../assets/bitmap-copy-8.png"),
+        checked: 0
       },
       {
         class: 'hide',
         name: require("../assets/marvel-copy.png"),
-        image: require("../assets/bitmap-copy-10.png")
+        image: require("../assets/bitmap-copy-10.png"),
+        checked: 0
       },
       {
         class: 'hide',
         name: require("../assets/pregnancy-parentin-copy-2.png"),
-        image: require("../assets/bitmap-copy-4.png")
+        image: require("../assets/bitmap-copy-4.png"),
+        checked: 0
       },
       {
         class:'hide',
         name: require("../assets/star-wars-copy-2.png"),
-        image: require("../assets/bitmap-copy-5.png")
+        image: require("../assets/bitmap-copy-5.png"),
+        checked: 0
       },
       {
         class: 'hide',
         name: require("../assets/travel-copy-3.png"),
-        image: require("../assets/bitmap-copy-13.png")
+        image: require("../assets/bitmap-copy-13.png"),
+        checked: 0
       }
-    ]
-
+    ],
+    valid: false
     };
 
   }
@@ -64,14 +73,23 @@ class NewsLetter extends Component {
     this.setState({
     hideButton: 'hide',
     blueBgVh: 'blue-bg-vh',
-    ...this.state.hideCategories,
+    ...this.state.hiddeneCategories,
     newArray
     })
+  }
+
+  isValid =(e)=> {
+    if(e.checked) {
+      console.log('VALIDDDDD')
+    } else {
+      console.log('NOT VALID')
+    }
   }
 
   render() {
 
     const newArray = []
+    // let total = 0;
 
 
     return (
@@ -114,15 +132,14 @@ class NewsLetter extends Component {
             </button>
 
             {
-              this.state.hideCategories.map((category) => {
+              this.state.hiddenCategories.map((category, i) => {
                 return(
-                  <div className={`${category.class} category-block`}>
-                    <input type="checkbox"/>
+                  <div key={i} className={`${category.class} category-block`}>
+                    <input onClick={(e)=> this.isValid(e.target)} type="checkbox"/>
                     <img src={category.name} alt="" />
                     <img src={category.image} alt="" />
                     { category.class = '' }
                     { newArray.push(category) }
-                    { console.log(newArray) }
                   </div>
                 )
               })
