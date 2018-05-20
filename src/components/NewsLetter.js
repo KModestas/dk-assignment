@@ -12,56 +12,47 @@ class NewsLetter extends Component {
       {
         class: 'hide',
         name: require("../assets/food-drink-copy-2.png"),
-        image: require("../assets/bitmap-copy-12.png"),
-        checked: 0
+        image: require("../assets/bitmap-copy-12.png")
       },
       {
         class: 'hide',
         name: require("../assets/gardening-copy.png"),
-        image: require("../assets/bitmap-copy-11.png"),
-        checked: 0
+        image: require("../assets/bitmap-copy-11.png")
       },
       {
         class: 'hide',
         name: require("../assets/health-fitness-copy-2.png"),
-        image: require("../assets/bitmap-copy-6.png"),
-        checked: 0
+        image: require("../assets/bitmap-copy-6.png")
       },
       {
         class: 'hide',
         name: require("../assets/history-reference-copy-2.png"),
-        image: require("../assets/bitmap-copy-3.png"),
-        checked: 0
+        image: require("../assets/bitmap-copy-3.png")
       },
       {
         class: 'hide',
         name: require("../assets/lego-books-copy-2.png"),
-        image: require("../assets/bitmap-copy-8.png"),
-        checked: 0
+        image: require("../assets/bitmap-copy-8.png")
       },
       {
         class: 'hide',
         name: require("../assets/marvel-copy.png"),
-        image: require("../assets/bitmap-copy-10.png"),
-        checked: 0
+        image: require("../assets/bitmap-copy-10.png")
       },
       {
         class: 'hide',
         name: require("../assets/pregnancy-parentin-copy-2.png"),
-        image: require("../assets/bitmap-copy-4.png"),
-        checked: 0
+        image: require("../assets/bitmap-copy-4.png")
       },
       {
         class:'hide',
         name: require("../assets/star-wars-copy-2.png"),
-        image: require("../assets/bitmap-copy-5.png"),
-        checked: 0
+        image: require("../assets/bitmap-copy-5.png")
       },
       {
         class: 'hide',
         name: require("../assets/travel-copy-3.png"),
-        image: require("../assets/bitmap-copy-13.png"),
-        checked: 0
+        image: require("../assets/bitmap-copy-13.png")
       }
     ],
     valid: false
