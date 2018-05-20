@@ -72,9 +72,16 @@ class NewsLetter extends Component {
   isValid =(e)=> {
     if(e.checked) {
       console.log('VALIDDDDD')
+      this.setState({
+      valid: true
+      })
     } else {
       console.log('NOT VALID')
+      this.setState({
+      valid: false
+      })
     }
+    console.log(this.state.valid)
   }
 
   render() {
@@ -93,19 +100,19 @@ class NewsLetter extends Component {
 <div className="category-container">
     <div className="category-flex">
             <div className="category-block">
-              <input type="checkbox"/>
+              <input onClick={(e)=> this.isValid(e.target)}  type="checkbox"/>
               <img src={require("../assets/children-s-copy-2.png")} alt=""/>
               <img src={require("../assets/bitmap-copy-2.png")} alt=""/>
             </div>
 
             <div className="category-block">
-              <input type="checkbox"/>
+              <input onClick={(e)=> this.isValid(e.target)} type="checkbox"/>
               <img src={require("../assets/crafts-hobbies-copy.png")} alt=""/>
               <img src={require("../assets/bitmap-copy-9.png")} alt=""/>
             </div>
 
             <div className="category-block">
-              <input type="checkbox"/>
+              <input onClick={(e)=> this.isValid(e.target)} type="checkbox"/>
               <img src={require("../assets/education-teachers-copy-2.png")} alt=""
               />
               <img
