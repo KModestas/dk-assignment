@@ -211,6 +211,12 @@ p {
     height: 60px;
     font-size: 16px;
   }
+
+  .success-container {
+    width: 940px;
+    height: 440px;
+  }
+
 }
 
 
