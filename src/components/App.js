@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NewsLetter from './NewsLetter';
 import SuccessPage from './SuccessPage';
 import '../styles/index.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
