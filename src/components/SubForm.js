@@ -7,36 +7,34 @@ class SubForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    firstName: '',
-    firstNameError: '',
-
-    lastName: '',
-    lastNameError: '',
-
-    email: '',
-    emailError: '',
-
-    terms: '',
-    termsError: '',
-
-    checked: false,
-    checkedError: '',
-
-    categoryError: ''
+    userInput: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      checked: false
+    },
+    errors: {
+      firstNameError: '',
+      lastNameError: '',
+      emailError: '',
+      checkedError: '',
+      categoryError: ''
+    }
   }
     this.handleCheckBox = this.handleCheckBox.bind(this);
 }
 
+// if spread operator is not used, other values are removed and the userInput objects is overriden to ONLY contain the checked property
 
   handleCheckBox() {
     this.setState({
-      checked: !this.state.checked
+    userInput: { ...this.state.userInput, checked: !this.state.userInput.checked }
     })
   }
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      userInput: { ...this.state.userInput, [e.target.name]: e.target.value}
     })
 
     console.log(this.state)
@@ -52,28 +50,28 @@ class SubForm extends Component {
       categoryError: ''
     }
 
-    if(!this.state.firstName) {
+    if(!this.state.userInput.firstName) {
       isError = true;
       errors.firstNameError = 'Please enter your first name'
-      console.log(this.state.firstNameError)
+      console.log(this.state.errors.firstNameError)
     }
 
-    if(!this.state.lastName) {
+    if(!this.state.userInput.lastName) {
       isError = true;
       errors.lastNameError = 'Please enter your last name'
-      console.log(this.state.lastNameError)
+      console.log(this.state.errors.lastNameError)
     }
 
-    if(!this.state.email) {
+    if(!this.state.userInput.email) {
       isError = true;
       errors.emailError = 'Please enter your email address'
-      console.log(this.state.emailError)
-    } else if (this.state.email.indexOf('@') === -1) {
+      console.log(this.state.errors.emailError)
+    } else if (this.state.userInput.email.indexOf('@') === -1) {
       isError = true;
       errors.emailError = 'Email Address must contain an "@" symbol'
     }
 
-    if(!this.state.checked) {
+    if(!this.state.userInput.checked) {
       isError = true;
       errors.checkedError = 'Please agree to the privacy policy and minimum age'
     }
@@ -85,7 +83,9 @@ class SubForm extends Component {
 
     if (isError) {
       this.setState({
-        ...errors
+        errors: {
+          ...errors
+        }
       });
     }
 
@@ -99,17 +99,19 @@ class SubForm extends Component {
     const err = this.validate();
       if (!err) {
       this.setState({
-        firstName: '',
-        firstNameError: '',
-
-        lastName: '',
-        lastNameError: '',
-
-        email: '',
-        emailError: '',
-
-        checked: false,
-        checkedError: ''
+        userInput: {
+          firstName: '',
+          lastName: '',
+          email: '',
+          checked: false
+        },
+        errors: {
+          firstNameError: '',
+          lastNameError: '',
+          emailError: '',
+          checkedError: '',
+          categoryError: ''
+        }
       })
       this.props.history.push('/success');
     }
@@ -129,10 +131,9 @@ class SubForm extends Component {
               placeholder="First Name*"
               name="firstName"
               onChange={this.handleChange}
-              value={this.state.firstName}
-              errortext={this.state.firstNameError}
+              value={this.state.userInput.firstName}
               />
-              <p>{ this.state.firstNameError }</p>
+              <p>{ this.state.errors.firstNameError }</p>
             </div>
 
             <div className="lname-input">
@@ -141,10 +142,9 @@ class SubForm extends Component {
                 placeholder="Last Name *"
                 name="lastName"
                 onChange={this.handleChange}
-                value={this.state.lastName}
-                errortext={this.state.lastNameError}
+                value={this.state.userInput.lastName}
               />
-              <p>{ this.state.lastNameError }</p>
+              <p>{ this.state.errors.lastNameError }</p>
             </div>
 
             <div className="email-input">
@@ -153,10 +153,9 @@ class SubForm extends Component {
                 placeholder="Your email address *"
                 name="email"
                 onChange={this.handleChange}
-                value={this.state.email}
-                errortext={this.state.emailError}
+                value={this.state.userInput.email}
               />
-              <p>{ this.state.emailError }</p>
+              <p>{ this.state.errors.emailError }</p>
             </div>
 
         <button onClick={e => this.onSubmit(e)}>
@@ -170,14 +169,14 @@ class SubForm extends Component {
           <div className="termsAndConditions">
             <input
               type="checkbox"
-              checked={this.state.checked}
+              checked={this.state.userInput.checked}
               onClick={this.handleCheckBox}
             />
 
           <div className="iAgree"></div>
 
           </div>
-            <p>{ this.state.checkedError }</p>
+            <p>{ this.state.errors.checkedError }</p>
         </div>
       </form>
       {/* <NewsLetter /> */}
