@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-
+// import NewsLetter from './NewsLetter'
 
 class SubForm extends Component {
 
@@ -20,7 +20,9 @@ class SubForm extends Component {
     termsError: '',
 
     checked: false,
-    checkedError: ''
+    checkedError: '',
+
+    categoryError: ''
   }
     this.handleCheckBox = this.handleCheckBox.bind(this);
 }
@@ -46,7 +48,8 @@ class SubForm extends Component {
       firstNameError: '',
       lastNameError: '',
       emailError: '',
-      checkedError: ''
+      checkedError: '',
+      categoryError: ''
     }
 
     if(!this.state.firstName) {
@@ -73,6 +76,11 @@ class SubForm extends Component {
     if(!this.state.checked) {
       isError = true;
       errors.checkedError = 'Please agree to the privacy policy and minimum age'
+    }
+
+    if(!this.props.categoryValid) {
+      isError = true;
+      errors.categoryError = 'Please select at least one category above'
     }
 
     if (isError) {
@@ -109,6 +117,7 @@ class SubForm extends Component {
 
   render() {
     return(
+      <div>
       <form className="subform-container">
 
         <div className="Join-our-newsletter"></div>
@@ -171,6 +180,8 @@ class SubForm extends Component {
             <p>{ this.state.checkedError }</p>
         </div>
       </form>
+      {/* <NewsLetter /> */}
+    </div>
     );
   }
 }
