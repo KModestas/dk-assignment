@@ -54,35 +54,29 @@ class SubForm extends Component {
     if(!this.state.userInput.firstName) {
       isError = true;
       errors.firstNameError = 'Please enter your first name'
-      console.log(this.state.errors.firstNameError)
     }
 
     if(!this.state.userInput.lastName) {
       isError = true;
       errors.lastNameError = 'Please enter your last name'
-      console.log(this.state.errors.lastNameError)
     }
 
     if(!this.state.userInput.email) {
       isError = true;
       errors.emailError = 'Please enter your email address'
-      console.log(this.state.errors.emailError)
     } else if (this.state.userInput.email.indexOf('@') === -1) {
       isError = true;
       errors.emailError = 'Email Address must contain an "@" symbol'
-      console.log(this.state.errors.emailError)
     }
 
     if(!this.state.userInput.checked) {
       isError = true;
       errors.checkedError = 'Please agree to the privacy policy and minimum age'
-      console.log(this.state.errors.checkedError)
     }
 
     if(!this.props.categoryValid) {
       isError = true;
       errors.categoryError = 'Please select at least one category above'
-      console.log(this.state.errors.categoryError)
     }
 
     if (isError) {
