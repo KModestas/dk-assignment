@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-// import NewsLetter from './NewsLetter'
+
 
 class SubForm extends Component {
 
@@ -24,17 +24,18 @@ class SubForm extends Component {
     this.handleCheckBox = this.handleCheckBox.bind(this);
 }
 
-// if spread operator is not used, other values are removed and the userInput objects is overriden to ONLY contain the checked property
 
   handleCheckBox() {
     this.setState({
-    userInput: { ...this.state.userInput, checked: !this.state.userInput.checked }
+      userInput: {
+        ...this.state.userInput, checked: !this.state.userInput.checked}
     })
   }
 
   handleChange = e => {
     this.setState({
-      userInput: { ...this.state.userInput, [e.target.name]: e.target.value}
+      userInput: {
+        ...this.state.userInput, [e.target.name]: e.target.value}
     })
 
     console.log(this.state)
@@ -69,16 +70,19 @@ class SubForm extends Component {
     } else if (this.state.userInput.email.indexOf('@') === -1) {
       isError = true;
       errors.emailError = 'Email Address must contain an "@" symbol'
+      console.log(this.state.errors.emailError)
     }
 
     if(!this.state.userInput.checked) {
       isError = true;
       errors.checkedError = 'Please agree to the privacy policy and minimum age'
+      console.log(this.state.errors.checkedError)
     }
 
     if(!this.props.categoryValid) {
       isError = true;
       errors.categoryError = 'Please select at least one category above'
+      console.log(this.state.errors.categoryError)
     }
 
     if (isError) {
@@ -122,13 +126,15 @@ class SubForm extends Component {
       <div>
       <form className="subform-container">
 
+        {<p>{ this.state.errors.categoryError }</p>}
+
         <div className="Join-our-newsletter"></div>
 
         <div className="subform-inputs">
           <div className="fname-input">
             <input
               type="text"
-              placeholder="First Name*"
+              placeholder=" First Name*"
               name="firstName"
               onChange={this.handleChange}
               value={this.state.userInput.firstName}
@@ -139,7 +145,7 @@ class SubForm extends Component {
             <div className="lname-input">
               <input
                 type="text"
-                placeholder="Last Name *"
+                placeholder=" Last Name *"
                 name="lastName"
                 onChange={this.handleChange}
                 value={this.state.userInput.lastName}
@@ -150,7 +156,7 @@ class SubForm extends Component {
             <div className="email-input">
               <input
                 type="text"
-                placeholder="Your email address *"
+                placeholder=" Your email address *"
                 name="email"
                 onChange={this.handleChange}
                 value={this.state.userInput.email}
@@ -179,7 +185,6 @@ class SubForm extends Component {
             <p>{ this.state.errors.checkedError }</p>
         </div>
       </form>
-      {/* <NewsLetter /> */}
     </div>
     );
   }
